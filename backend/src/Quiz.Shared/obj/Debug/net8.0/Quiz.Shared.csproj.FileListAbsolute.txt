@@ -1,0 +1,11 @@
+/home/victor/www/quiz-sockets/backend/src/Quiz.Shared/bin/Debug/net8.0/Quiz.Shared.deps.json
+/home/victor/www/quiz-sockets/backend/src/Quiz.Shared/bin/Debug/net8.0/Quiz.Shared.dll
+/home/victor/www/quiz-sockets/backend/src/Quiz.Shared/bin/Debug/net8.0/Quiz.Shared.pdb
+/home/victor/www/quiz-sockets/backend/src/Quiz.Shared/obj/Debug/net8.0/Quiz.Shared.GeneratedMSBuildEditorConfig.editorconfig
+/home/victor/www/quiz-sockets/backend/src/Quiz.Shared/obj/Debug/net8.0/Quiz.Shared.AssemblyInfoInputs.cache
+/home/victor/www/quiz-sockets/backend/src/Quiz.Shared/obj/Debug/net8.0/Quiz.Shared.AssemblyInfo.cs
+/home/victor/www/quiz-sockets/backend/src/Quiz.Shared/obj/Debug/net8.0/Quiz.Shared.csproj.CoreCompileInputs.cache
+/home/victor/www/quiz-sockets/backend/src/Quiz.Shared/obj/Debug/net8.0/Quiz.Shared.dll
+/home/victor/www/quiz-sockets/backend/src/Quiz.Shared/obj/Debug/net8.0/refint/Quiz.Shared.dll
+/home/victor/www/quiz-sockets/backend/src/Quiz.Shared/obj/Debug/net8.0/Quiz.Shared.pdb
+/home/victor/www/quiz-sockets/backend/src/Quiz.Shared/obj/Debug/net8.0/ref/Quiz.Shared.dll

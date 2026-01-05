@@ -1,0 +1,113 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "Quiz.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Quiz.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Quiz.Domain.dll": {}
+        }
+      },
+      "Quiz.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Quiz.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Quiz.Shared.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Quiz.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Quiz.Domain/Quiz.Domain.csproj",
+      "msbuildProject": "../Quiz.Domain/Quiz.Domain.csproj"
+    },
+    "Quiz.Shared/1.0.0": {
+      "type": "project",
+      "path": "../Quiz.Shared/Quiz.Shared.csproj",
+      "msbuildProject": "../Quiz.Shared/Quiz.Shared.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "Quiz.Domain >= 1.0.0",
+      "Quiz.Shared >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/home/victor/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/victor/www/quiz-sockets/backend/src/Quiz.Application/Quiz.Application.csproj",
+      "projectName": "Quiz.Application",
+      "projectPath": "/home/victor/www/quiz-sockets/backend/src/Quiz.Application/Quiz.Application.csproj",
+      "packagesPath": "/home/victor/.nuget/packages/",
+      "outputPath": "/home/victor/www/quiz-sockets/backend/src/Quiz.Application/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/victor/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "/home/victor/www/quiz-sockets/backend/src/Quiz.Domain/Quiz.Domain.csproj": {
+              "projectPath": "/home/victor/www/quiz-sockets/backend/src/Quiz.Domain/Quiz.Domain.csproj"
+            },
+            "/home/victor/www/quiz-sockets/backend/src/Quiz.Shared/Quiz.Shared.csproj": {
+              "projectPath": "/home/victor/www/quiz-sockets/backend/src/Quiz.Shared/Quiz.Shared.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.416/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+/home/victor/www/quiz-sockets/backend/src/Quiz.Application/bin/Debug/net8.0/Quiz.Application.deps.json
+/home/victor/www/quiz-sockets/backend/src/Quiz.Application/bin/Debug/net8.0/Quiz.Application.dll
+/home/victor/www/quiz-sockets/backend/src/Quiz.Application/bin/Debug/net8.0/Quiz.Application.pdb
+/home/victor/www/quiz-sockets/backend/src/Quiz.Application/bin/Debug/net8.0/Quiz.Domain.dll
+/home/victor/www/quiz-sockets/backend/src/Quiz.Application/bin/Debug/net8.0/Quiz.Shared.dll
+/home/victor/www/quiz-sockets/backend/src/Quiz.Application/bin/Debug/net8.0/Quiz.Domain.pdb
+/home/victor/www/quiz-sockets/backend/src/Quiz.Application/bin/Debug/net8.0/Quiz.Shared.pdb
+/home/victor/www/quiz-sockets/backend/src/Quiz.Application/obj/Debug/net8.0/Quiz.Application.csproj.AssemblyReference.cache
+/home/victor/www/quiz-sockets/backend/src/Quiz.Application/obj/Debug/net8.0/Quiz.Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/victor/www/quiz-sockets/backend/src/Quiz.Application/obj/Debug/net8.0/Quiz.Application.AssemblyInfoInputs.cache
+/home/victor/www/quiz-sockets/backend/src/Quiz.Application/obj/Debug/net8.0/Quiz.Application.AssemblyInfo.cs
+/home/victor/www/quiz-sockets/backend/src/Quiz.Application/obj/Debug/net8.0/Quiz.Application.csproj.CoreCompileInputs.cache
+/home/victor/www/quiz-sockets/backend/src/Quiz.Application/obj/Debug/net8.0/Quiz.App.79DFCDEC.Up2Date
+/home/victor/www/quiz-sockets/backend/src/Quiz.Application/obj/Debug/net8.0/Quiz.Application.dll
+/home/victor/www/quiz-sockets/backend/src/Quiz.Application/obj/Debug/net8.0/refint/Quiz.Application.dll
+/home/victor/www/quiz-sockets/backend/src/Quiz.Application/obj/Debug/net8.0/Quiz.Application.pdb
+/home/victor/www/quiz-sockets/backend/src/Quiz.Application/obj/Debug/net8.0/ref/Quiz.Application.dll
