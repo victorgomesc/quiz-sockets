@@ -9,3 +9,4 @@
 /home/victor/www/quiz-sockets/backend/src/Quiz.Domain/obj/Debug/net8.0/refint/Quiz.Domain.dll
 /home/victor/www/quiz-sockets/backend/src/Quiz.Domain/obj/Debug/net8.0/Quiz.Domain.pdb
 /home/victor/www/quiz-sockets/backend/src/Quiz.Domain/obj/Debug/net8.0/ref/Quiz.Domain.dll
+/home/victor/www/quiz-sockets/backend/src/Quiz.Domain/obj/Debug/net8.0/Quiz.Domain.sourcelink.json

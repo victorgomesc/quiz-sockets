@@ -11,7 +11,6 @@ public sealed class GameLoop
     private readonly GameRoom _room;
     private readonly MatchReportClient _reportClient;
 
-    // 🔽 CORRIGIDO: tipo correto
     private readonly ConcurrentDictionary<Guid, TimedAnswer> _answers = new();
 
     private sealed record TimedAnswer(
@@ -65,9 +64,13 @@ public sealed class GameLoop
     {
         foreach (var question in _questions)
         {
-            _currentQuestionIndex++; // 🔽 ADICIONADO
+            _currentQuestionIndex++;
             _questionStartUtc = DateTime.UtcNow;
             _answers.Clear();
+
+            // reset “respondeu?” e sincroniza snapshot
+            _room.ResetAnswersForNewQuestion();
+            await _room.BroadcastSnapshotAsync();
 
             var publicQuestion = new QuestionPublicDto
             {
@@ -80,7 +83,6 @@ public sealed class GameLoop
                 MessageEnvelope.Create(MessageTypes.QUESTION, publicQuestion)
             );
 
-
             await Task.Delay(TimeSpan.FromSeconds(10));
         }
 
@@ -92,34 +94,74 @@ public sealed class GameLoop
         if (_currentQuestionIndex < 0)
             return false;
 
-       if (session.UserId is null)
+        if (session.UserId is null)
             return false;
 
-        return _answers.TryAdd(
-            session.UserId.Value,
+        var userId = session.UserId.Value;
+
+        // uma resposta por usuário por pergunta
+        var ok = _answers.TryAdd(
+            userId,
             new TimedAnswer(dto, DateTime.UtcNow)
         );
+
+        if (!ok)
+            return false;
+
+        var question = _questions[_currentQuestionIndex];
+        var timed = _answers[userId];
+        var delta = CalculateScore(question, timed);
+        var isCorrect = delta > 0;
+
+        // marca como respondeu e atualiza placar acumulado
+        _room.MarkAnswered(userId);
+        var total = _room.AddScore(userId, delta);
+
+        // 1) broadcast: “fulano respondeu” (status)
+        _ = _room.BroadcastAsync(MessageEnvelope.Create(
+            MessageTypes.ANSWER_RECEIVED,
+            new { userId }
+        ));
+
+        // 2) broadcast: update de placar parcial
+        _ = _room.BroadcastAsync(MessageEnvelope.Create(
+            MessageTypes.SCORE_UPDATE,
+            new ScoreUpdateDto { UserId = userId, Delta = delta, TotalScore = total }
+        ));
+
+        // 3) mensagem DIRETA para o jogador (feedback verde/vermelho)
+        _ = session.SendAsync(MessageEnvelope.Create(
+            MessageTypes.ANSWER_RESULT,
+            new AnswerResultDto
+            {
+                QuestionId = dto.QuestionId,
+                IsCorrect = isCorrect,
+                Delta = delta,
+                TotalScore = total
+            },
+            requestId: dto.QuestionId // opcional
+        ), CancellationToken.None);
+
+        // 4) snapshot atualizado (opcional, mas mantém UI sempre correta)
+        _ = _room.BroadcastSnapshotAsync();
+
+        return true;
     }
 
     private async Task EndMatchAsync()
     {
         _room.EndMatch();
 
-        var results = new List<PlayerResult>();
+        // Resultado final baseado no snapshot (score acumulado)
+        var snapshot = _room.GetSnapshot();
 
-        foreach (var (userId, timed) in _answers)
+        var results = snapshot.Select(p => new PlayerResult
         {
-            var question = _questions[_currentQuestionIndex];
-            var score = CalculateScore(question, timed);
-
-            results.Add(new PlayerResult
-            {
-                UserId = userId,
-                Score = score,
-                CorrectAnswers = score > 0 ? 1 : 0,
-                TotalAnswers = _questions.Count
-            });
-        }
+            UserId = p.UserId,
+            Score = p.Score,
+            CorrectAnswers = 0, // (opcional: você pode contar depois)
+            TotalAnswers = _questions.Count
+        }).ToList();
 
         await _room.BroadcastAsync(
             MessageEnvelope.Create(MessageTypes.MATCH_ENDED, results)

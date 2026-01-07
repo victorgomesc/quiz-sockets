@@ -15,3 +15,4 @@
 /home/victor/www/quiz-sockets/backend/src/Quiz.Application/obj/Debug/net8.0/refint/Quiz.Application.dll
 /home/victor/www/quiz-sockets/backend/src/Quiz.Application/obj/Debug/net8.0/Quiz.Application.pdb
 /home/victor/www/quiz-sockets/backend/src/Quiz.Application/obj/Debug/net8.0/ref/Quiz.Application.dll
+/home/victor/www/quiz-sockets/backend/src/Quiz.Application/obj/Debug/net8.0/Quiz.Application.sourcelink.json

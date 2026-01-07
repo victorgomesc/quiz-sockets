@@ -8,7 +8,7 @@ public sealed class QuestionDto
 
     public string[] Options { get; set; } = [];
 
-    // ⚠️ IMPORTANTE:
+    //  IMPORTANTE:
     // Esse campo NÃO deve ser enviado ao cliente no futuro.
     // Por enquanto está aqui para facilitar o mock.
     public int CorrectOptionIndex { get; set; }

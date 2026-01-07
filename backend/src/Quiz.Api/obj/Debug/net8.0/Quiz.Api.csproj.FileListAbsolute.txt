@@ -122,3 +122,4 @@
 /home/victor/www/quiz-sockets/backend/src/Quiz.Api/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /home/victor/www/quiz-sockets/backend/src/Quiz.Api/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /home/victor/www/quiz-sockets/backend/src/Quiz.Api/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/home/victor/www/quiz-sockets/backend/src/Quiz.Api/obj/Debug/net8.0/Quiz.Api.sourcelink.json

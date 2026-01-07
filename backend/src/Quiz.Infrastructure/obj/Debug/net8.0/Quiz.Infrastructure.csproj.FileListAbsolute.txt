@@ -19,3 +19,4 @@
 /home/victor/www/quiz-sockets/backend/src/Quiz.Infrastructure/obj/Debug/net8.0/ref/Quiz.Infrastructure.dll
 /home/victor/www/quiz-sockets/backend/src/Quiz.Infrastructure/bin/Debug/net8.0/Quiz.Infrastructure.runtimeconfig.json
 /home/victor/www/quiz-sockets/backend/src/Quiz.Infrastructure/obj/Debug/net8.0/Quiz.Infrastructure.genruntimeconfig.cache
+/home/victor/www/quiz-sockets/backend/src/Quiz.Infrastructure/obj/Debug/net8.0/Quiz.Infrastructure.sourcelink.json

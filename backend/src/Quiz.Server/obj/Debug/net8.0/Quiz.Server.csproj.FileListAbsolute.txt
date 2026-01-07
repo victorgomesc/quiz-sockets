@@ -66,3 +66,4 @@
 /home/victor/www/quiz-sockets/backend/src/Quiz.Server/bin/Debug/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
 /home/victor/www/quiz-sockets/backend/src/Quiz.Server/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll
 /home/victor/www/quiz-sockets/backend/src/Quiz.Server/bin/Debug/net8.0/Microsoft.Extensions.Http.dll
+/home/victor/www/quiz-sockets/backend/src/Quiz.Server/obj/Debug/net8.0/Quiz.Server.sourcelink.json
